@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+</head>
+<body>
+    <h1>Paises</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Capital</th>
+                <th>Bandera</th>
+            </tr>
+            <tbody>
+                {% for pais in paises %}
+                <tr>
+                    <td>{{pais['Nombre']}}</td>
+                    <td>{{pais['Capital']}}</td>
+                    <td><img src="{{pais['Bandera']}}" alt="bandera"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </thead>
+    </table>
+</body>
+</html>
